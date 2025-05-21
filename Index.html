@@ -1,5 +1,210 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Cy's M1 Website</title>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTS.org</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            color: #000;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screen%20Shot%202025-05-21%20at%201.21.23%20PM-KOBtxvVTYAkYWCfgdL5JYRotgbmncO.png');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 40px;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 100px;
+        }
+
+        .left-text {
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            max-width: 300px;
+            text-align: left;
+        }
+
+        .center-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .right-text {
+            position: absolute;
+            top: 30%;
+            right: 10%;
+            max-width: 300px;
+            text-align: right;
+        }
+
+        .bottom-text {
+            position: absolute;
+            bottom: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .highlight {
+            color: #b83b8e;
+            font-weight: bold;
+        }
+
+        .community {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .open-soon {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        .footer-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #b83b8e;
+        }
+
+        /* Arrows */
+        .arrow {
+            position: absolute;
+            border: 2px solid #000;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            border-color: transparent transparent transparent #000;
+            border-width: 2px 0 0 2px;
+        }
+
+        .arrow-top-right {
+            top: 25%;
+            left: 50%;
+            transform: rotate(45deg);
+        }
+
+        .arrow-bottom-right {
+            top: 45%;
+            right: 20%;
+            transform: rotate(135deg);
+        }
+
+        .arrow-bottom-left {
+            bottom: 25%;
+            left: 20%;
+            transform: rotate(225deg);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .left-text, .right-text {
+                position: relative;
+                top: auto;
+                left: auto;
+                right: auto;
+                max-width: 100%;
+                margin: 20px auto;
+                text-align: center;
+            }
+
+            .bottom-text {
+                position: relative;
+                bottom: auto;
+                left: auto;
+                transform: none;
+                max-width: 100%;
+                margin: 40px auto;
+            }
+
+            .center-text {
+                position: relative;
+                top: auto;
+                left: auto;
+                transform: none;
+                margin: 40px auto;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+                overflow-y: auto;
+                height: auto;
+            }
+
+            .arrow {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="content">
+        <div class="logo">WebRTS.org</div>
+        
+        <div class="left-text">
+            Uniting viewers from <span class="highlight">anywhere</span> in the world in one shared moment
+        </div>
+        
+        <div class="center-text">
+            <div class="community">The community is here</div>
+            <div class="open-soon">Open Soon</div>
+        </div>
+        
+        <div class="right-text">
+            An <span class="highlight">open</span> solution to compromises on latency and scale for <span class="highlight">real-time</span> streaming
+        </div>
+        
+        <div class="bottom-text">
+            No special players. No proprietary CDN. Just sub-second, secure, live video - <span class="highlight">Anywhere</span>
+        </div>
+        
+        <!-- Curved arrows -->
+        <div class="arrow arrow-top-right"></div>
+        <div class="arrow arrow-bottom-right"></div>
+        <div class="arrow arrow-bottom-left"></div>
+        
+        <div class="footer-line"></div>
+    </div>
+</body>
+</html>
