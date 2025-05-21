@@ -11,200 +11,132 @@
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
-
+        
         body {
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
+            background-color: #f5f5f5;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        .container {
             position: relative;
-            color: #000;
-        }
-
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
-            background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screen%20Shot%202025-05-21%20at%201.21.23%20PM-KOBtxvVTYAkYWCfgdL5JYRotgbmncO.png');
-            background-size: cover;
-            background-position: center;
-            z-index: -1;
+            min-height: 100vh;
+            background: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screen%20Shot%202025-05-21%20at%201.21.23%20PM-0vJS7x4cEkQVSte03SmoYHysHGrZl5.png') center center/cover no-repeat;
         }
-
+        
         .content {
-            position: relative;
+            position: absolute;
             width: 100%;
             height: 100%;
+            display: flex;
+            flex-direction: column;
             padding: 40px;
         }
-
+        
         .logo {
             font-size: 2.5rem;
             font-weight: bold;
-            margin-bottom: 100px;
+            margin-bottom: 60px;
         }
-
-        .left-text {
-            position: absolute;
-            top: 30%;
-            left: 10%;
-            max-width: 300px;
-            text-align: left;
+        
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
-
+        
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .left-text, .right-text {
+            max-width: 350px;
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+        
         .center-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             text-align: center;
-        }
-
-        .right-text {
-            position: absolute;
-            top: 30%;
-            right: 10%;
-            max-width: 300px;
-            text-align: right;
-        }
-
-        .bottom-text {
-            position: absolute;
-            bottom: 15%;
-            left: 50%;
-            transform: translateX(-50%);
-            max-width: 600px;
-            text-align: center;
-        }
-
-        .highlight {
-            color: #b83b8e;
+            font-size: 2rem;
             font-weight: bold;
+            margin: 20px 0;
         }
-
-        .community {
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
+        
         .open-soon {
+            text-align: center;
             font-size: 1.5rem;
-            margin-top: 20px;
+            margin: 20px 0 40px;
         }
-
-        .footer-line {
+        
+        .bottom-text {
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-top: auto;
+            margin-bottom: 40px;
+        }
+        
+        .highlight {
+            color: #9c27b0;
+            font-weight: bold;
+        }
+        
+        .footer {
             position: absolute;
             bottom: 0;
-            left: 0;
             width: 100%;
             height: 5px;
-            background-color: #b83b8e;
+            background-color: #9c27b0;
         }
-
-        /* Arrows */
-        .arrow {
-            position: absolute;
-            border: 2px solid #000;
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            border-color: transparent transparent transparent #000;
-            border-width: 2px 0 0 2px;
-        }
-
-        .arrow-top-right {
-            top: 25%;
-            left: 50%;
-            transform: rotate(45deg);
-        }
-
-        .arrow-bottom-right {
-            top: 45%;
-            right: 20%;
-            transform: rotate(135deg);
-        }
-
-        .arrow-bottom-left {
-            bottom: 25%;
-            left: 20%;
-            transform: rotate(225deg);
-        }
-
-        /* Responsive adjustments */
+        
         @media (max-width: 768px) {
-            .left-text, .right-text {
-                position: relative;
-                top: auto;
-                left: auto;
-                right: auto;
-                max-width: 100%;
-                margin: 20px auto;
-                text-align: center;
-            }
-
-            .bottom-text {
-                position: relative;
-                bottom: auto;
-                left: auto;
-                transform: none;
-                max-width: 100%;
-                margin: 40px auto;
-            }
-
-            .center-text {
-                position: relative;
-                top: auto;
-                left: auto;
-                transform: none;
-                margin: 40px auto;
-            }
-
-            .content {
-                display: flex;
+            .top-section {
                 flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                padding: 20px;
-                overflow-y: auto;
-                height: auto;
+                gap: 30px;
             }
-
-            .arrow {
-                display: none;
+            
+            .left-text, .right-text {
+                max-width: 100%;
+            }
+            
+            .logo {
+                margin-bottom: 30px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="background"></div>
-    <div class="content">
-        <div class="logo">WebRTS.org</div>
-        
-        <div class="left-text">
-            Uniting viewers from <span class="highlight">anywhere</span> in the world in one shared moment
+    <div class="container">
+        <div class="content">
+            <div class="logo">WebRTS.org</div>
+            
+            <div class="main-content">
+                <div class="top-section">
+                    <div class="left-text">
+                        Uniting viewers from <span class="highlight">anywhere</span> in the world in one shared moment
+                    </div>
+                    
+                    <div class="right-text">
+                        An <span class="highlight">open</span> solution to compromises on latency and scale for <span class="highlight">real-time</span> streaming
+                    </div>
+                </div>
+                
+                <div class="center-text">The community is here</div>
+                
+                <div class="open-soon">Open Soon</div>
+                
+                <div class="bottom-text">
+                    No special players. No proprietary CDN.<br>
+                    Just sub-second, secure, live video -<br>
+                    <span class="highlight">Anywhere</span>
+                </div>
+            </div>
         </div>
         
-        <div class="center-text">
-            <div class="community">The community is here</div>
-            <div class="open-soon">Open Soon</div>
-        </div>
-        
-        <div class="right-text">
-            An <span class="highlight">open</span> solution to compromises on latency and scale for <span class="highlight">real-time</span> streaming
-        </div>
-        
-        <div class="bottom-text">
-            No special players. No proprietary CDN. Just sub-second, secure, live video - <span class="highlight">Anywhere</span>
-        </div>
-        
-        <!-- Curved arrows -->
-        <div class="arrow arrow-top-right"></div>
-        <div class="arrow arrow-bottom-right"></div>
-        <div class="arrow arrow-bottom-left"></div>
-        
-        <div class="footer-line"></div>
+        <div class="footer"></div>
     </div>
 </body>
 </html>
